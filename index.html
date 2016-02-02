@@ -40,368 +40,391 @@
 
     <div class="section">
       <div class="container">
-        <h2>1 &ndash; Pilih Tanggal</h2>
-        <form role="form">
-          <div class="row">
-            <div class="col-xs-6 col-sm-3">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Check-in</label>
-                <div id="checkin" class="btn btn-default form-control">
-                  <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
+      
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h2 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Pilih Tanggal
+                </a>
+              </h2>
             </div>
-            <div class="col-xs-6 col-sm-3">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Durasi</label>
-                <select class="form-control">
-                  <option selected>1 malam</option>
-                  <option>2 malam</option>
-                  <option>3 malam</option>
-                  <option>4 malam</option>
-                  <option>5 malam</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Check-out</label>
-                <div id="checkout" class="btn btn-default form-control">
-                  <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">&nbsp;</label>
-                <button type="submit" class="btn btn-primary form-control" contenteditable="true">Cek Kamar</button>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <form role="form">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Check-in</label>
+                        <div id="checkin" class="btn btn-default form-control">
+                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                          <span></span> <b class="caret"></b>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Durasi</label>
+                        <select class="form-control">
+                          <option selected>1 malam</option>
+                          <option>2 malam</option>
+                          <option>3 malam</option>
+                          <option>4 malam</option>
+                          <option>5 malam</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Check-out</label>
+                        <div id="checkout" class="btn btn-default form-control">
+                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                          <span></span> <b class="caret"></b>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">&nbsp;</label>
+                        <button type="submit" class="btn btn-primary form-control" contenteditable="true">Cek Kamar</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-        </form>
-        <hr />
-      </div>
-    </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Pilih Villa/Kamar
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th>Tipe</th>
+                        <th style="text-align:center">Kapasitas</th>
+                        <th style="text-align:right">
+                          Harga
+                          <span class="label label-default">per malam</span>
+                        </th>
+                        <th style="text-align:center;width:1em;">Jumlah</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><img src="./img/villa1.jpg" /></td>
+                        <td>  
+                          <strong>Family Villa</strong>
+                          <br />
+                          <button class="btn btn-link btn-xs">
+                            <span>detail villa</span> <b class="caret"></b>
+                          </button>
+                          <br />
+                          <br />
+                          <small>
+                            <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
+                          </small>
+                        </td>
+                        <td align="center">6</td>
+                        <td align="right"><small>Rp</small> <strong>6.000</strong><small>.000</small></td>
+                        <td align="center">
+                          <select class="form-control">
+                            <option selected>1 unit</option>
+                          </select>
+                        </td>
+                        <td row span="4">
+                          <input type="submit" class="btn btn-primary form-control" value="Pesan Villa" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="./img/kamar1.jpg" /></td>
+                        <td>
+                          <strong>Standard Room (Bed Only)</strong>
+                          <br />
+                          <button class="btn btn-link btn-xs">
+                            <span>detail kamar</span> <b class="caret"></b>
+                          </button>
+                          <br />
+                          <br />
+                          <small class="text-muted">
+                            <i class="glyphicon glyphicon-ban-circle fa fa-ban-circle"></i> without breakfast
+                          </small>
+                        </td>
+                        <td align="center">2</td>
+                        <td align="right"><small>Rp</small> <strong>650</strong><small>.000</small></td>
+                        <td align="center">
+                          <select class="form-control">
+                            <option selected>1 kamar</option>
+                            <option>2 kamar</option>
+                            <option>3 kamar</option>
+                            <option>4 kamar</option>
+                            <option>5 kamar</option>
+                          </select>
+                        </td>
+                        <td>
+                          <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="./img/kamar1.jpg" /></td>
+                        <td>
+                          <strong>Standard Room (Bed &amp; Breakfast)</strong>
+                          <br />
+                          <button class="btn btn-link btn-xs">
+                            <span>detail kamar</span> <b class="caret"></b>
+                          </button>
+                          <br />
+                          <br />
+                          <small>
+                            <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
+                          </small>
+                        </td>
+                        <td align="center">2</td>
+                        <td align="right"><small>Rp</small> <strong>750</strong><small>.000</small></td>
+                        <td align="center">
+                          <select class="form-control">
+                            <option selected>1 kamar</option>
+                            <option>2 kamar</option>
+                            <option>3 kamar</option>
+                            <option>4 kamar</option>
+                            <option>5 kamar</option>
+                          </select>
+                        </td>
+                        <td>
+                          <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="./img/kamar2.jpg" /></td>
+                        <td>
+                          <strong>Deluxe Room</strong>
+                          <br />
+                          <button class="btn btn-link btn-xs">
+                            <span>detail kamar</span> <b class="caret"></b>
+                          </button>
+                          <br />
+                          <br />
+                          <small>
+                            <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
+                          </small>
+                        </td>
+                        <td align="center">2</td>
+                        <td align="right"><small>Rp</small> <strong>1.000</strong><small>.000</small></td>
+                        <td align="center">
+                          <select class="form-control">
+                            <option selected>1 kamar</option>
+                            <option>2 kamar</option>
+                            <option>3 kamar</option>
+                            <option>4 kamar</option>
+                            <option>5 kamar</option>
+                          </select>
+                        </td>
+                        <td>
+                          <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><img src="./img/kamar3.jpg" /></td>
+                        <td>
+                          <strong>Excutive Room</strong>
+                          <br />
+                          <button class="btn btn-link btn-xs">
+                            <span>detail kamar</span> <b class="caret"></b>
+                          </button>
+                          <br />
+                          <br />
+                          <small>
+                            <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
+                          </small>
+                        </td>
+                        <td align="center">2</td>
+                        <td align="right"><small>Rp</small> <strong>1.250</strong><small>.000</small></td>
+                        <td align="center">
+                          <select class="form-control">
+                            <option selected>1 kamar</option>
+                            <option>2 kamar</option>
+                            <option>3 kamar</option>
+                            <option>4 kamar</option>
+                            <option>5 kamar</option>
+                          </select>
+                        </td>
+                        <td>
+                          <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Isi Data Pemesan
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <form role="form">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Nama Kontak</label>
+                        <input class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Alamat Email Kontak</label>
+                        <input class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">No. Telpon Kontak</label>
+                        <input class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Nama lengkap tamu</label>
+                        <input class="form-control" />
+                      </div>
+                    </div>
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="inputEmail3" class="control-label" contenteditable="true">Permintaan khusus (opsional</label>
+                        <textarea rows="3" class="form-control">
+                        </textarea>
+                      </div>
+                    </div>
+                  </div>
 
-    <div class="section">
-      <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h3>Rincian Pesanan</h3>
 
-        <h2>2 &ndash; Pilih Villa/Kamar</h2>
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td> 
+                              Check-in
+                            </td>
+                            <td align="right">
+                              26 Januari 2016
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Check-out
+                            </td>
+                            <td align="right">
+                              27 Januari 2016
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Durasi
+                            </td>
+                            <td align="right">
+                              1 malam
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Tipe kamar
+                            </td>
+                            <td align="right">
+                              Standard Room (Bed &amp; Breakfast)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Jumlah kamar
+                            </td>
+                            <td align="right">
+                              1
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Jumlah tamu per kamar
+                            </td>
+                            <td align="right">
+                              2
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>&nbsp;</th>
-                    <th>Tipe</th>
-                    <th style="text-align:center">Kapasitas</th>
-                    <th style="text-align:right">
-                      Harga
-                      <span class="label label-default">per malam</span>
-                    </th>
-                    <th style="text-align:center;width:1em;">Jumlah</th>
-                    <th>&nbsp;</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><img src="./img/villa1.jpg" /></td>
-                    <td>  
-                      <strong>Family Villa</strong>
-                      <br />
-                      <button class="btn btn-link btn-xs">
-                        <span>detail villa</span> <b class="caret"></b>
-                      </button>
-                      <br />
-                      <br />
-                      <small>
-                        <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
-                      </small>
-                    </td>
-                    <td align="center">6</td>
-                    <td align="right"><small>Rp</small> <strong>6.000</strong><small>.000</small></td>
-                    <td align="center">
-                      <select class="form-control">
-                        <option selected>1 unit</option>
-                      </select>
-                    </td>
-                    <td row span="4">
-                      <input type="submit" class="btn btn-primary form-control" value="Pesan Villa" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img src="./img/kamar1.jpg" /></td>
-                    <td>
-                      <strong>Standard Room (Bed Only)</strong>
-                      <br />
-                      <button class="btn btn-link btn-xs">
-                        <span>detail kamar</span> <b class="caret"></b>
-                      </button>
-                      <br />
-                      <br />
-                      <small class="text-muted">
-                        <i class="glyphicon glyphicon-ban-circle fa fa-ban-circle"></i> without breakfast
-                      </small>
-                    </td>
-                    <td align="center">2</td>
-                    <td align="right"><small>Rp</small> <strong>650</strong><small>.000</small></td>
-                    <td align="center">
-                      <select class="form-control">
-                        <option selected>1 kamar</option>
-                        <option>2 kamar</option>
-                        <option>3 kamar</option>
-                        <option>4 kamar</option>
-                        <option>5 kamar</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img src="./img/kamar1.jpg" /></td>
-                    <td>
-                      <strong>Standard Room (Bed &amp; Breakfast)</strong>
-                      <br />
-                      <button class="btn btn-link btn-xs">
-                        <span>detail kamar</span> <b class="caret"></b>
-                      </button>
-                      <br />
-                      <br />
-                      <small>
-                        <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
-                      </small>
-                    </td>
-                    <td align="center">2</td>
-                    <td align="right"><small>Rp</small> <strong>750</strong><small>.000</small></td>
-                    <td align="center">
-                      <select class="form-control">
-                        <option selected>1 kamar</option>
-                        <option>2 kamar</option>
-                        <option>3 kamar</option>
-                        <option>4 kamar</option>
-                        <option>5 kamar</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img src="./img/kamar2.jpg" /></td>
-                    <td>
-                      <strong>Deluxe Room</strong>
-                      <br />
-                      <button class="btn btn-link btn-xs">
-                        <span>detail kamar</span> <b class="caret"></b>
-                      </button>
-                      <br />
-                      <br />
-                      <small>
-                        <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
-                      </small>
-                    </td>
-                    <td align="center">2</td>
-                    <td align="right"><small>Rp</small> <strong>1.000</strong><small>.000</small></td>
-                    <td align="center">
-                      <select class="form-control">
-                        <option selected>1 kamar</option>
-                        <option>2 kamar</option>
-                        <option>3 kamar</option>
-                        <option>4 kamar</option>
-                        <option>5 kamar</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><img src="./img/kamar3.jpg" /></td>
-                    <td>
-                      <strong>Excutive Room</strong>
-                      <br />
-                      <button class="btn btn-link btn-xs">
-                        <span>detail kamar</span> <b class="caret"></b>
-                      </button>
-                      <br />
-                      <br />
-                      <small>
-                        <i class="glyphicon glyphicon-cutlery fa fa-cutlery"></i> with breakfast
-                      </small>
-                    </td>
-                    <td align="center">2</td>
-                    <td align="right"><small>Rp</small> <strong>1.250</strong><small>.000</small></td>
-                    <td align="center">
-                      <select class="form-control">
-                        <option selected>1 kamar</option>
-                        <option>2 kamar</option>
-                        <option>3 kamar</option>
-                        <option>4 kamar</option>
-                        <option>5 kamar</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input type="submit" class="btn btn-primary form-control" value="Pesan Kamar" />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                      <h3>Rincian Harga</h3>
+
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td> 
+                              <strong>Sumberwatu Heritage</strong>
+                            </td>
+                            <td align="right">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Standard Room (Bed &amp; Breakfast)
+                            </td>
+                            <td align="right">
+                              Rp 750.000
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              Pajak &amp; Biaya Servis
+                            </td>
+                            <td align="right">
+                              Rp 250.000
+                            </td>
+                          </tr>
+                          <tr class="active">
+                            <td> 
+                              <strong>Total</strong>
+                            </td>
+                            <td align="right">
+                              <strong>Rp 1.000.000</strong>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+
+                      <div class="col-sm-6">
+                        &nbsp;
+                      </div>
+                      <div class="col-sm-6">
+                         <button type="submit" class="btn btn-primary btn-lg btn-block" contenteditable="true">Lanjutkan Pemesanan</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-        <hr />
       </div>
     </div>
+  </div>
 
-    <div class="section">
-      <div class="container">
-        <h2>3 &ndash; Isi Data Pemesan</h2>
-        <form role="form">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Nama Kontak</label>
-                <input class="form-control" />
-              </div>
-            </div>
-            <div class="col-xs-6">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Alamat Email Kontak</label>
-                <input class="form-control" />
-              </div>
-            </div>
-            <div class="col-xs-6">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">No. Telpon Kontak</label>
-                <input class="form-control" />
-              </div>
-            </div>
-            <div class="col-xs-12">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Nama lengkap tamu</label>
-                <input class="form-control" />
-              </div>
-            </div>
-            <div class="col-xs-12">
-              <div class="form-group">
-                <label for="inputEmail3" class="control-label" contenteditable="true">Permintaan khusus (opsional</label>
-                <textarea rows="3" class="form-control">
-                </textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12">
-              <h3>Rincian Pesanan</h3>
-
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <td> 
-                      Check-in
-                    </td>
-                    <td align="right">
-                      26 Januari 2016
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Check-out
-                    </td>
-                    <td align="right">
-                      27 Januari 2016
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Durasi
-                    </td>
-                    <td align="right">
-                      1 malam
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Tipe kamar
-                    </td>
-                    <td align="right">
-                      Standard Room (Bed &amp; Breakfast)
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Jumlah kamar
-                    </td>
-                    <td align="right">
-                      1
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Jumlah tamu per kamar
-                    </td>
-                    <td align="right">
-                      2
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <h3>Rincian Harga</h3>
-
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <td> 
-                      <strong>Sumberwatu Heritage</strong>
-                    </td>
-                    <td align="right">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Standard Room (Bed &amp; Breakfast)
-                    </td>
-                    <td align="right">
-                      Rp 750.000
-                    </td>
-                  </tr>
-                  <tr>
-                    <td> 
-                      Pajak &amp; Biaya Servis
-                    </td>
-                    <td align="right">
-                      Rp 250.000
-                    </td>
-                  </tr>
-                  <tr class="active">
-                    <td> 
-                      <strong>Total</strong>
-                    </td>
-                    <td align="right">
-                      <strong>Rp 1.000.000</strong>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-
-              <div class="col-sm-6">
-                &nbsp;
-              </div>
-              <div class="col-sm-6">
-                 <button type="submit" class="btn btn-primary btn-lg btn-block" contenteditable="true">Lanjutkan Pemesanan</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
   <script>
     $(function() {
 
