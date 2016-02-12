@@ -16,8 +16,14 @@
     .panel-title {
       font-size: 2rem;
     }
+    .panel-title a {
+      display: block;
+    }
     .table tbody tr td {
       vertical-align: middle;
+    }
+    .table-small tbody tr td {
+      font-size: 12px;
     }
   </style>
   </head><body>
@@ -45,9 +51,10 @@
       <div class="container">
       
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-          <div class="panel panel-default">
+          <div class="panel panel-success">
             <div class="panel-heading" role="tab" id="headingOne">
               <h2 class="panel-title">
+                <span class="label pull-right">1</span>
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   Pilih Tanggal
                 </a>
@@ -101,6 +108,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
               <h4 class="panel-title">
+                <span class="label pull-right">2</span>
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   Pilih Villa/Kamar
                 </a>
@@ -245,6 +253,7 @@
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingThree">
               <h4 class="panel-title">
+                <span class="label pull-right">3</span>
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   Isi Data Pemesan
                 </a>
@@ -287,16 +296,16 @@
                             </textarea>
                           </div>
                           <br />
-                          <button type="submit" class="btn btn-primary btn-lg pull-right" contenteditable="true">Lanjutkan Pemesanan</button>
+                          <button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapseFour" class="btn btn-primary btn-lg pull-right" contenteditable="true">Lanjutkan Pemesanan</button>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-4">
                       <div class="row">
                         <div class="col-xs-12">
-                          <h3>Rincian Pesanan</h3>
+                          <h4>Rincian Pesanan</h4>
 
-                          <table class="table">
+                          <table class="table table-small">
                             <tbody>
                               <tr>
                                 <td> 
@@ -327,7 +336,7 @@
                                   Tipe kamar
                                 </td>
                                 <td align="right">
-                                  Standard Room (Bed &amp; Breakfast)
+                                  Standard Room
                                 </td>
                               </tr>
                               <tr>
@@ -349,9 +358,9 @@
                             </tbody>
                           </table>
 
-                          <h3>Rincian Harga</h3>
+                          <h4>Rincian Harga</h4>
 
-                          <table class="table">
+                          <table class="table table-small">
                             <tbody>
                               <tr>
                                 <td> 
@@ -362,7 +371,7 @@
                               </tr>
                               <tr>
                                 <td> 
-                                  Standard Room (Bed &amp; Breakfast)
+                                  Standard Room
                                 </td>
                                 <td align="right">
                                   Rp 750.000
@@ -386,12 +395,39 @@
                               </tr>
                             </table>
                           </div>
-
                         </div>
                       </div>
                     </div>
                   </div>
                 </form>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                  <span class="label pull-right">4</span>
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Pembayaran
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFive">
+                <h4 class="panel-title">
+                  <span class="label pull-right">5</span>
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Reservasi Berhasil
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="panel-body">
+                </div>
               </div>
             </div>
           </div>
@@ -404,8 +440,8 @@
     $(function() {
 
         function cb(start, end) {
-            $('#checkin span').html(start.format('D MMMM YYYY'));
-            $('#checkout span').html(end.format('D MMMM YYYY'));
+            $('#checkin span').html(start.format('D MMM YYYY'));
+            $('#checkout span').html(end.format('D MMM YYYY'));
         }
         cb(moment().add(2, 'days'), moment().add(3, 'days'));
 
@@ -419,6 +455,11 @@
         }, cb);
 
     });
+
+    $('#accordion').on('shown.bs.collapse', function () {
+      $(this).find('.panel').attr('class', 'panel panel-default');
+      $(this).find('.collapse.in').parent().attr('class', 'panel panel-success');
+    })
   </script>
 
 </body></html>
